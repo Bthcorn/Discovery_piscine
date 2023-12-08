@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Balloon</title>
+    <link rel="stylesheet" href="balloon.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var maxSize = 420;
+        var currentSize = 200;
+        var color = ['red', 'green', 'blue'];
+        var colorIndex = 0;
+
+        $(document).ready(function() {
+            $("#myBalloon").click(function() {
+                if (currentSize < maxSize) {
+                    currentSize += 10;
+                    $("#myBalloon").css("width", currentSize);
+                    $("#myBalloon").css("height", currentSize);
+                    $("#myBalloon").css("background-color", color[colorIndex]);
+                    colorIndex = (colorIndex + 1) % color.length;
+                }
+                else {
+                    currentSize = 200;
+                    $("#myBalloon").css("width", currentSize);
+                    $("#myBalloon").css("height", currentSize);
+                    $("#myBalloon").css("background-color", 'red');
+                    colorIndex = 0;
+                }
+            });
+            $("#myBalloon").mouseenter(function() {
+                currentSize -= 5;
+                if (currentSize > 200) {
+                    $("#myBalloon").css("width", currentSize);
+                    $("#myBalloon").css("height", currentSize);
+                    colorIndex = (colorIndex - 1 + color.length) % color.length;
+                    $("#myBalloon").css("background-color", color[colorIndex]);
+                }
+            });
+            $("#myBalloon").mouseleave(function() {
+                currentSize -= 5;
+                if (currentSize > 200) {
+                    $("#myBalloon").css("width", currentSize);
+                    $("#myBalloon").css("height", currentSize);
+                    colorIndex = (colorIndex - 1 + color.length) % color.length;
+                    $("#myBalloon").css("background-color", color[colorIndex]);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="balloon" id="myBalloon"></div>   
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>randombg</title>
+    <link rel="stylesheet" href="background.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script>
+        function randomColor() {
+            var color = ['grean', 'red', 'blue', 'yellow', 'pink', 'black', 'white', 'brown', 'orange', 'purple', 'gray', 'silver', 'gold', 'cyan', 'magenta', 'lime', 'olive', 'maroon', 'navy', 'teal', 'aqua'];
+            color = color[Math.floor(Math.random() * color.length)];
+            return color;
+        }
+    </script> -->
+    <script>
+        $(document).ready(function() {
+            $(".btn").click(function() {
+                var color = ['grean', 'red', 'blue', 'yellow', 'pink', 'black', 'white', 'brown', 'orange', 'purple', 'gray', 'silver', 'gold', 'cyan', 'magenta', 'lime', 'olive', 'maroon', 'navy', 'teal', 'aqua'];
+                color = color[Math.floor(Math.random() * color.length)];
+                $("body").css("background-color", color);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button class="btn">Click me</button>
+</body>
+
+</html>

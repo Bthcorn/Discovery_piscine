@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        setInterval(function() {
+            alert("Please, use me...");
+        }, 30000);
+
+        $(document).ready(function() {
+            $("#try").click(function() {
+                var num1 = $("#num1").val();
+                var num2 = $("#num2").val();
+                var operator = $("#operator").val();
+                var result;
+                if (parseInt(num1) < 0 || parseInt(num2) < 0) {
+                    alert("Error :(");
+                } else {
+                    if (operator == "+") {
+                        result = parseInt(num1) + parseInt(num2);
+                    } else if (operator == "-") {
+                        result = parseInt(num1) - parseInt(num2);
+                    } else if (operator == "*") {
+                        result = parseInt(num1) * parseInt(num2);
+                    } else if (operator == "/") {
+                        result = parseInt(num1) / parseInt(num2);
+                    } else if (operator == "%") {
+                        result = parseInt(num1) % parseInt(num2);
+                    }
+                    if (result == "NaN") {
+                        result = "It's over 9000!"
+                    }
+                    console.log(result);
+                    $("#result").html(result);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <input id="num1" type="text" placeholder="Number 1" value="">
+    <input id="num2" type="text" placeholder="Number 2" value="">
+    <!-- select field contains + - / + % -->
+    <br>
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="=">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <button class="btn" id="try">Try me!</button>
+    <div id="result"></div>
+    <br>
+    <!-- using script setInterval -->
+
+</body>
+</html>

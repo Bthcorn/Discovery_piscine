@@ -1,0 +1,12 @@
+.balloon {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.balloon:hover {
+    transform: scale(1.1);
+}
