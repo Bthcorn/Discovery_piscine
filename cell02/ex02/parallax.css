@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.parallax1 {
+    background-image: url('https://2.bp.blogspot.com/-B8F4TMHJEno/WDeuQvq5c_I/AAAAAAAAEG0/fNLpgeZxO1Acb8eUOINeMIZVX1FbBpJSACLcB/s1600/737400.jpg');
+
+    height: 100%;
+
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    background-image: url('https://th.bing.com/th/id/R.1f6aed4c7d7f8bd9e84273e20892537e?rik=DP32A2RAVSKaNA&pid=ImgRaw&r=0');
+
+    height: 100%;
+
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
